@@ -1,1 +1,1 @@
-A SIMPLE COOKIE CLICKER GAME I MADE
+a simple cookie clicker game I made

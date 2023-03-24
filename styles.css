@@ -1,0 +1,567 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+
+*{
+    font-family: 'Tilt Neon', cursive;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+}
+body{
+    
+background: rgb(131,58,180);
+    background: linear-gradient(0deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    overflow: hidden;
+  
+}
+.cookie-img{
+    height: 100%;
+    width: 100%;
+  
+    animation: rotate 15s  linear infinite forwards;
+    border-radius: 50%;
+    transition: .05s all;
+    cursor: pointer;
+}
+
+@keyframes rotate {
+    0%{
+        rotate: 0deg;
+
+    }
+    50%{
+        rotate: 180deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+
+
+
+.clicker{
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cookie{
+    height:80%;
+    width: 80%;
+    border-radius: 50%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom: 100px; */
+    transition: .2s all;
+}
+
+
+
+
+
+
+.cookie:active .cookie-img{
+    transform: scale(.95);
+}
+
+
+body{
+    
+
+
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.options{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 70px;
+    width: 500px;
+
+}
+
+
+
+.number-of-cookies{
+  text-align: center;
+    height: 0;
+    font-size: 60px;
+    color: white;
+}
+
+
+
+
+
+
+.buy-multiplier .price{
+    font-size: 12px;
+    position: absolute;
+    top:70%;
+}
+
+
+.status{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 40px;
+    margin-top: 100px;
+}
+.trackers{
+    position: relative;
+    transition: .2s all;
+    z-index: -1;
+}
+
+.cookie-click{
+    content: "";
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    animation: byebye 5s linear forwards;
+    height: 10px;
+    width: 10px;
+    font-weight: bold;
+}
+
+@keyframes byebye {
+    0%{
+      
+    }
+    20%{
+        opacity: 0;
+        offset: 1;
+    }
+    100%{
+        opacity: 0;
+        transform:translateY(-300px);
+        /* transform: translateY(-300px); */
+    }
+}
+
+
+
+
+/* cookie monster image style */
+.cookie-monster{
+    background-image: url('https://media.giphy.com/media/YovEFrZNGMkF2/giphy.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top:0;
+    left: 0%;
+    height: 50%;
+    width: 30%;
+    box-shadow: 0px 0px 20px 30px white inset;
+}
+
+
+/* cookie monster image style */
+
+
+
+@keyframes rotate {
+
+    0%{
+        rotate: 0deg;
+    }
+    50%{
+        rotate:180deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+    
+}
+
+
+
+/*  shop styling */
+ .tab{
+    width: 150px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background: rgba(0,0,0,0.4);
+
+    height: 5%;
+    position: absolute;
+    top: 95%;
+    left: 0%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    cursor: pointer;
+    transition: .2s all;
+    border: 1px rgb(112, 112, 112) solid;
+}
+.tab:hover i,.tab:hover p{
+    animation: shake .1s infinite;
+}
+
+.skin-tab{
+    width: 150px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background: rgba(0,0,0,0.4);
+
+    height: 5%;
+    position: absolute;
+    
+    top:95%;
+    left:150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    cursor: pointer;
+    transition: .2s all;
+    border: 1px rgb(112, 112, 112) solid;
+ 
+
+}
+@keyframes shake {
+    0%{
+        rotate:5deg;
+    }
+    50%{
+        rotate: -5deg;
+    }
+    100%{
+rotate:5deg;
+    }
+    
+}
+
+.tab i, .tab p{
+    transition: .2s all;
+}
+.shop{
+    border-top: 2px black solid;
+    padding: 10px 15px;
+    height: 15%;
+    width: 99.5%;
+    position: absolute;
+    top:100%;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    /* justify-content: center; */
+    background: rgba(0,0,0,0.4);
+    transition: .2s all;
+
+    z-index: 2;
+}
+/* skin list is the same as shop */
+.skin-list{
+    border-top: 2px black solid;
+    padding: 10px 15px;
+    height: 15%;
+    width: 99.5%;
+    position: absolute;
+    top:100%;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    /* justify-content: center; */
+    background: rgba(0,0,0,0.4);
+    transition: .2s all;
+z-index: 2;
+    
+}
+.skin-item{
+    margin: 0px 10px;
+    padding-top: 10px;
+    height: 95%;
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content:center; */
+    background: white;
+    box-shadow: 0px 0px 14px 5px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 0px 14px 5px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 14px 5px rgba(0,0,0,0.75);
+border-radius: 10px;
+position:relative;
+overflow: hidden;
+cursor: pointer;
+transition: .2s all;
+
+
+}
+.skin-item:hover{
+    content: 'SELECT';
+}
+
+.skin-item img{
+    height: 100px;
+}
+.selected::before{
+    content: "SELECTED";
+    color: rgb(26, 197, 0);
+    font-size: 50px;
+    font-weight: bold;
+   font-family: 'Teko', sans-serif;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* rotate: 45deg; */
+    position: absolute;
+    top: -10%;
+    left: -25%;
+
+    height: 190%;
+    width: 150%;
+    background: rgba(0, 0, 0, 0.608);
+    z-index: 5;
+    
+}
+.buy-a-item{
+    margin: 0px 10px;
+    padding-top: 10px;
+    height: 95%;
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content:start; */
+    background: white;
+    box-shadow: 0px 0px 14px 5px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 0px 14px 5px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 14px 5px rgba(0,0,0,0.75);
+border-radius: 10px;
+position:relative;
+overflow: hidden;
+cursor: pointer;
+transition: .2s all;
+
+
+}
+.buy-a-item:hover{
+transform: scale(1.1);
+}
+.skin-item p{
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+
+}
+.skin-item:hover{
+transform: scale(1.1);
+}
+
+/* .buy-a-item:active{
+transform: scale(.9);
+    
+} */
+.ribbon{
+    background: red;
+    /* font-weight: bolder; */
+    margin: 0;
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    left: -77px;
+    top: 25px;
+    
+    rotate: -45deg;
+    width: 225px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.skin-ribbon{
+    background: rgb(0, 132, 255);
+    /* font-weight: bolder; */
+    margin: 0;
+    font-size: 20px;
+    color: white;
+    position: absolute;
+height: 100px;
+display: flex;
+top: 114px;
+padding-top: 10px;
+align-items: flex-start;
+justify-content: center;
+    width: 225px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: bold;
+
+}
+.buy-a-item .ribbon{
+    font-weight: bold;
+
+    font-size: 20px;
+}
+.buy-a-item p{
+    font-weight: bold;
+
+    font-size: 20px;
+}
+.buy-a-item img{
+    height:60%;
+    margin-top: 10px;
+    user-select: none;
+
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+}
+
+/* sold items */
+.sold{
+    
+}
+.sold::after{
+    content: "SOLD";
+    color: red;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 10px;
+   font-family: 'Teko', sans-serif;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    rotate: 45deg;
+    position: absolute;
+    top: -25%;
+    left: -25%;
+
+    height: 150%;
+    width: 150%;
+    background: rgba(0, 0, 0, 0.692);
+    z-index: 5;
+    
+}
+.skin{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background: rgb(0, 132, 255);
+    rotate: 45deg;
+    top: -90px;
+    left: 115px;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+/* sold items */
+
+/*end of shop styling */
+
+
+
+/* lock section */
+
+.locked{
+height: 1300px;
+width: 1300px;
+background-color: rgba(0, 0, 0, 0.884);
+z-index: 5;
+position: absolute;
+top: 0;
+display: flex;
+align-items: flex-start;
+justify-content: center;
+color: red;
+font-size: 40px;
+font-weight: bolder;
+    padding-top: 100px;
+z-index: 5;
+}
+
+
+
+/* end of lock section */
+
+
+/* reset style */
+.reset{
+    color: white;
+    background: rgb(178, 0, 0);
+    height: 50px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    border-radius: 50px;
+    position: absolute;
+    bottom: .5%;
+    right: 0%;
+    transition: .2s all;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.reset:hover{
+    transform: scale(1.1);
+}
+
+.free{
+    color: white;
+    background: rgb(0, 193, 97);
+    height: 50px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    border-radius: 50px;
+    position: absolute;
+    bottom: .5%;
+    right: 110px;
+    transition: .2s all;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.free:hover{
+    transform: scale(1.1);
+}
+
+
+

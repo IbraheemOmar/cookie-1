@@ -303,7 +303,7 @@ function AutoClick() {
 
 
 skinBtn.onclick = () =>{
-  if(skinBtn.style.top == "78%"){
+  if(skinBtn.style.top == "75%"){
     skinBtn.style.top = "95%";
     shopBtn.style.opacity= "1";
     shopBtn.style.transform= "";
@@ -318,11 +318,11 @@ skinBtn.onclick = () =>{
     
     
   }else{
-    skinBtn.style.top = "78%";
+    skinBtn.style.top = "75%";
     shopBtn.style.opacity= "0";
     shopBtn.style.transform= "scale(0)";
 
-    skinList.style.top = "83%";
+    skinList.style.top = "80%";
     
     skinIcon.classList.remove("fa-angle-up");
     skinIcon.classList.add("fa-angle-down");
@@ -344,10 +344,9 @@ skinBtn.onclick = () =>{
 
 
 
-
 // shop section
 shopBtn.onclick = () =>{
-  if(shopBtn.style.top == "78%"){
+  if(shopBtn.style.top == "75%"){
     shopBtn.style.top = "95%";
     skinBtn.style.opacity= "1";
     skinBtn.style.transform= "";
@@ -360,11 +359,11 @@ shopBtn.onclick = () =>{
     
     
   }else{
-    shopBtn.style.top = "78%";
+    shopBtn.style.top = "75%";
     skinBtn.style.opacity= "0";
     skinBtn.style.transform= "scale(0)";
 
-    shop.style.top = "83%";
+    shop.style.top = "80%";
     
     shopIcon.classList.remove("fa-angle-up");
     shopIcon.classList.add("fa-angle-down");
@@ -412,7 +411,7 @@ if(count>=2000&&oreoPurchases==0)
     cookiemonsterSound.play();
     playback= false;
   }
-  count = Math.floor(count-500);
+  count = Math.floor(count-2000);
   number.textContent = count + " cookies";
   cookie.style.transform= "scale(0) rotate(-60deg)";
   buyOreo.style.transform = "scale(.9)";
@@ -488,7 +487,7 @@ if(count>=2000&&oreoPurchases==0)
 
 var donutPurchases = 0;
 buyDonut.onclick = ()=>{
-if(count>=500&&donutPurchases==0)
+if(count>=1000&&donutPurchases==0)
 {
   donutPurchases++
   if(!playback){
@@ -499,7 +498,7 @@ if(count>=500&&donutPurchases==0)
     cookiemonsterSound.play();
     playback= false;
   }
-  count = Math.floor(count-500);
+  count = Math.floor(count-1000);
   number.textContent = count + " cookies";
   cookie.style.transform= "scale(0) rotate(-60deg)";
   buyDonut.style.transform = "scale(.9)";
@@ -693,6 +692,8 @@ allSkins.forEach((e)=>{
 
         e.classList.remove('selected')
         e.style.transform= "";
+
+       
       })
       
       
@@ -706,14 +707,14 @@ allSkins.forEach((e)=>{
         playback= false;
       }
       
-      cookie.style.transform= "scale(0) rotate(-60deg)";
       e.style.transform = "scale(.9)";
       
       let time = setTimeout(()=>{
-        e.style.transform = "scale(1)";
         e.classList.add('selected')
+        e.style.transform = "scale(1)";
       },80)
       
+      cookie.style.transform= "scale(0) rotate(-60deg)";
       let appear = setTimeout(()=>{
         
         
@@ -732,9 +733,9 @@ allSkins.forEach((e)=>{
         if(e.classList.contains('chocolate-item')){
           cookieImage.src = "/external stuff/chocolate.png";
         }
-        cookie.style.transform= "";
         
-      },500)
+        cookie.style.transform= "";
+      },200)
     }
   }
 })
@@ -761,10 +762,22 @@ let restart = ()=>{
 
 //free cookies
 let free = ()=>{
-
+  let freeBtn = document.querySelector(".free");
   let audio = new Audio('external stuff/ES_Vending Machine 24 - SFX Producer.mp3')
   audio.play();
   count += 500;
+
+
+
   number.textContent = "";
   number.textContent = Math.floor(count) + " cookies";
+
+  freeBtn.style.transform = 'scale(.9)';
+
+  let freeTimeOut = setTimeout(()=>{
+  freeBtn.style.transform = ''
+
+  },100)
+
+
 }

@@ -11,12 +11,16 @@
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+
 
 }
 body{
     
 background: rgb(131,58,180);
     background: linear-gradient(0deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+
+    background-size: cover;
     overflow: hidden;
   
 }
@@ -65,6 +69,9 @@ background: rgb(131,58,180);
     justify-content: center;
     /* margin-bottom: 100px; */
     transition: .2s all;
+
+
+
 }
 
 
@@ -119,7 +126,7 @@ body{
 
 
 .status{
-    width: 50%;
+    height: 80px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -127,6 +134,7 @@ body{
     color: white;
     font-size: 40px;
     margin-top: 100px;
+    border: 2px red solid;
 }
 .trackers{
     position: relative;
@@ -145,6 +153,8 @@ body{
     width: 10px;
     font-weight: bold;
 }
+
+
 
 @keyframes byebye {
     0%{
@@ -205,7 +215,7 @@ body{
     border-top-right-radius: 20px;
     background: rgba(0,0,0,0.4);
 
-    height: 5%;
+    height: 44px;
     position: absolute;
     top: 95%;
     left: 0%;
@@ -230,7 +240,7 @@ body{
     border-top-right-radius: 20px;
     background: rgba(0,0,0,0.4);
 
-    height: 5%;
+    height: 44px;
     position: absolute;
     
     top:95%;
@@ -265,13 +275,15 @@ rotate:5deg;
     transition: .2s all;
 }
 .shop{
+    
     border-top: 2px black solid;
     padding: 10px 15px;
-    height: 15%;
-    width: 99.5%;
+    padding-bottom: 20px;
+    height: 17%;
+    width: 3000px;
     position: absolute;
     top:100%;
-    left: 0;
+    left: 0%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -285,8 +297,9 @@ rotate:5deg;
 .skin-list{
     border-top: 2px black solid;
     padding: 10px 15px;
-    height: 15%;
-    width: 99.5%;
+    padding-bottom: 20px;
+    height: 17%;
+    width: 3000px;
     position: absolute;
     top:100%;
     left: 0;
@@ -302,7 +315,7 @@ z-index: 2;
 .skin-item{
     margin: 0px 10px;
     padding-top: 10px;
-    height: 95%;
+    height: 145px;
     width: 170px;
     display: flex;
     flex-direction: column;
@@ -350,7 +363,7 @@ transition: .2s all;
 .buy-a-item{
     margin: 0px 10px;
     padding-top: 10px;
-    height: 95%;
+    height: 145px;
     width: 170px;
     display: flex;
     flex-direction: column;
@@ -445,9 +458,7 @@ justify-content: center;
 }
 
 /* sold items */
-.sold{
-    
-}
+
 .sold::after{
     content: "SOLD";
     color: red;
@@ -553,7 +564,7 @@ z-index: 5;
     border-radius: 50px;
     position: absolute;
     bottom: .5%;
-    right: 110px;
+    right: 120px;
     transition: .2s all;
     z-index: 1;
     cursor: pointer;
@@ -565,3 +576,7 @@ z-index: 5;
 
 
 
+
+/* responsive style*/
+
+ 

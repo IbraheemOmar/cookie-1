@@ -12,17 +12,29 @@
     -moz-user-select: none;
     -ms-user-select: none;
     -webkit-tap-highlight-color: transparent;
-
-
+box-sizing: border-box;
+margin: 0;
+padding: 0;
 }
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
 body{
+    
     
 background: rgb(131,58,180);
     background: linear-gradient(0deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
-
-    background-size: cover;
+    background-size: contain;
+    background-repeat:no-repeat;
     overflow: hidden;
   
+}
+.projecto{
+    overflow: hidden;
 }
 .cookie-img{
     height: 100%;
@@ -213,7 +225,6 @@ body{
     bottom: 0;
     height: 100px;
     width: 100vw;
-    border: 2px red solid;
 }
 
 .tab{
@@ -585,6 +596,10 @@ z-index: 5;
 
 @media (max-width:800px){
     
+
+    .body{
+        overflow: hidden;
+    }
    .cookie-img{
     transform: scale(.8);
    }

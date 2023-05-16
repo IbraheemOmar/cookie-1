@@ -126,7 +126,20 @@
 
 
         <!-- projecto -->
-      </div>
 </body>
+
 <script src="code.js"></script>
+
+
+<!-- jquery for overflow problem -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(window).on('load resize', function() {
+  if ($(window).width() < 481) {
+    $('body').css('overflow', 'hidden');
+  } else {
+    $('body').css('overflow', 'auto');
+  }
+});
+</script>
 </html>

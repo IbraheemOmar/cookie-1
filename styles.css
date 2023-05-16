@@ -134,7 +134,6 @@ body{
     color: white;
     font-size: 40px;
     margin-top: 100px;
-    border: 2px red solid;
 }
 .trackers{
     position: relative;
@@ -209,7 +208,15 @@ body{
 
 
 /*  shop styling */
- .tab{
+.tab-list{
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100vw;
+    border: 2px red solid;
+}
+
+.tab{
     width: 150px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -217,8 +224,8 @@ body{
 
     height: 44px;
     position: absolute;
-    top: 95%;
-    left: 0%;
+    bottom:0%;
+    left: 1%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -243,8 +250,8 @@ body{
     height: 44px;
     position: absolute;
     
-    top:95%;
-    left:150px;
+    bottom:0%;
+    left:165px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -564,7 +571,7 @@ z-index: 5;
     border-radius: 50px;
     position: absolute;
     bottom: .5%;
-    right: 120px;
+    right: 110px;
     transition: .2s all;
     z-index: 1;
     cursor: pointer;
@@ -576,7 +583,62 @@ z-index: 5;
 
 
 
+@media (max-width:800px){
+    
+   .cookie-img{
+    transform: scale(.8);
+   }
+   .number-of-cookies{
+    font-size: 48px;
+   }
 
+   .status{
+    transform: scale(.7);
+    margin: 0;
+   }
+
+   .free{
+    transform: scale(.7);
+    right: 80px;
+   }
+
+   .reset{
+    transform: scale(.7);
+   }
+
+   .tab{
+    
+    border-radius: 50px;
+    height: 50px;
+    width: 100px;
+    transform: scale(.9);
+
+   }
+   .tab i{
+    display: none;
+   }
+   .shop-tab{
+    left: 5px;
+    position: relative;
+    top: 48%;
+}
+   .skin-tab{
+    left: 95px;
+    position: relative;
+    top:-4%;
+
+}
+.free{
+    margin-left: 10px;
+}
+.reset{
+}
+.tab-list{
+    display: flex;
+    flex-direction: column;
+}
+
+}
 /* responsive style*/
 
  

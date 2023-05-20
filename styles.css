@@ -731,7 +731,7 @@ transform: translateY(-100px);
     background-color: rgba(0, 0, 0, 0.881);
 }
 .locked{
-    top:-30px;
+    top:-50px;
 }
 .skin-ribbon{
     display: block;
@@ -767,6 +767,9 @@ width: 1000px;
        height: 65%;
     }
 
+}
+.exit-btn{
+    display: none;
 }
 /* responsive style*/
 @media (max-height:1000px) {
@@ -838,3 +841,4 @@ width: 1000px;
         top: -30px;
     }
 }
+

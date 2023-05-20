@@ -26,7 +26,7 @@ background: rgb(131,58,180);
     background: linear-gradient(0deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
     background-size: contain;
     background-repeat:no-repeat;
-    
+    width: 100%;
     overflow-y: hidden;
   
 }
@@ -57,8 +57,8 @@ background: rgb(131,58,180);
 
 
 .clicker{
-    height: 500px;
-    width: 500px;
+    height: min-content;
+    max-width:100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,9 +76,6 @@ background: rgb(131,58,180);
     justify-content: center;
     /* margin-bottom: 100px; */
     transition: .2s all;
-
-
-
 }
 
 
@@ -140,7 +137,7 @@ height: 100vh;
     justify-content: space-between;
     color: white;
     font-size: 40px;
-    margin-top: 100px;
+    margin-top: 200px;
 }
 .trackers{
     position: relative;

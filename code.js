@@ -1,3 +1,4 @@
+
 const cookie = document.querySelector(".cookie");
 
 const cookieImage = document.querySelector(".cookie-img")
@@ -47,7 +48,7 @@ let playback = false;
 
 
 //assigning initial values 
-let count = 0;
+let count = 6000;
 let clickers = 0;
 let multiplier = 1;
 let bonus = 0;
@@ -55,7 +56,7 @@ let bonus = 0;
 
 
 //clicker price
-let clickerPrice = 100;
+let clickerPrice = 20;
 clickerPriceElement.textContent = "Cost: " + clickerPrice + " 🍪";
 
 //multiplier pricce
@@ -83,7 +84,7 @@ images.forEach(element => {
 // clicking cookie effect 
 
 cookie.onmousedown = () => {
-let clickUp = new Audio('/external stuff/ES_Switch Click 1 - SFX Producer.mp3')
+let clickUp = new Audio('ES_Switch Click 1 - SFX Producer.mp3')
  clickUp.play(); 
   
  //getting the mouse position
@@ -172,7 +173,7 @@ buyClicker.onclick = () => {
     if(!playback){
       playback = true;
       
-      cookiemonsterSound.src ='external stuff/ES_Cash Register 11 - SFX Producer.mp3';
+      cookiemonsterSound.src ='ES_Cash Register Open 5 - SFX Producer.mp3';
       
       cookiemonsterSound.play();
       playback= false;
@@ -246,7 +247,7 @@ buyMultiplier.onclick = () => {
     if(!playback){
       playback = true;
       
-      cookiemonsterSound.src ='external stuff/ES_Cash Register 11 - SFX Producer.mp3';
+      cookiemonsterSound.src ='ES_Cash Register Open 5 - SFX Producer.mp3';
       
       cookiemonsterSound.play();
       playback= false;
@@ -296,33 +297,54 @@ function AutoClick() {
   }
 }
 
+//makes sure that when the screen is resized, the buttons are reset to the original position
 
+// const positionReset = setInterval(function(){
 
+//   console.log("hello");
+//     shopBtn.style.top =="95%";
+//     skinBtn.style.top +="95%";
+  
+// },1000) 
 
 // skin section
-
-
+let skinFlag = false;
 skinBtn.onclick = () =>{
-  if(skinBtn.style.top == "75%"){
-    skinBtn.style.top = "95%";
-    shopBtn.style.opacity= "1";
-    shopBtn.style.transform= "";
+  if(window.innerWidth<=1000){
+   
 
+    if(!skinFlag&&!shopFlag)
+    {
+      skinFlag=true;
+      skinList.style.animation  = "enter .3s linear forwards";
+      skinList.style.zIndex = "5";
+  
+    }
+    else{
+    }
+  }
+  else{
+  
+    if(skinBtn.style.top== "75%"){
+      skinBtn.style.top="95%";
+      shopBtn.style.opacity= "1";
+      shopBtn.style.transform= "";
+      
+      skinList.style.top = "100%";
+      
+      skinIcon.classList.remove("fa-angle-down");
+      skinIcon.classList.add("fa-angle-up");
+      
+      
+      
+    }
     
-    
-    skinList.style.top = "100%";
-    
-    skinIcon.classList.remove("fa-angle-down");
-    skinIcon.classList.add("fa-angle-up");
-    
-    
-    
-  }else{
+  else{
     skinBtn.style.top = "75%";
     shopBtn.style.opacity= "0";
-    shopBtn.style.transform= "scale(0)";
-
+    
     skinList.style.top = "80%";
+    skinList.style.zIndex = "5"
     
     skinIcon.classList.remove("fa-angle-up");
     skinIcon.classList.add("fa-angle-down");
@@ -331,6 +353,8 @@ skinBtn.onclick = () =>{
     
   }
 }
+}
+
 // end of skin section
 
 
@@ -345,14 +369,37 @@ skinBtn.onclick = () =>{
 
 
 // shop section
+let shopFlag = false;
 shopBtn.onclick = () =>{
-  if(shopBtn.style.top == "75%"){
-    shopBtn.style.top = "95%";
+
+  //not doing anything right now
+  //the idea was to reset the position of the shop and skin tab
+  //when the the window size was changed since the desktop view has them both move up and down
+
+//   shopBtn.style.top =="95%";
+// skinBtn.style.top =="95%";
+
+if(window.innerWidth<=1000){
+
+  if(!shopFlag&&!skinFlag)
+  {
+    shopFlag=true;
+    shop.style.animation  = "enter .3s linear forwards";
+    shop.style.zIndex = "5";
+
+  }
+  else{
+  }
+}
+else{
+
+  if(shopBtn.style.top== "75%"){
+    shopBtn.style.top="95%";
     skinBtn.style.opacity= "1";
-    skinBtn.style.transform= "";
+    
     
     shop.style.top = "100%";
-    
+    shop.style.zIndex = "-5"
     shopIcon.classList.remove("fa-angle-down");
     shopIcon.classList.add("fa-angle-up");
     
@@ -360,10 +407,10 @@ shopBtn.onclick = () =>{
     
   }else{
     shopBtn.style.top = "75%";
-    skinBtn.style.opacity= "0";
-    skinBtn.style.transform= "scale(0)";
-
+    
     shop.style.top = "80%";
+    skinBtn.style.opacity= "0";
+    shop.style.zIndex = "5";
     
     shopIcon.classList.remove("fa-angle-up");
     shopIcon.classList.add("fa-angle-down");
@@ -371,6 +418,7 @@ shopBtn.onclick = () =>{
     
     
   }
+}
 }
 // end of shop section
 
@@ -406,7 +454,8 @@ if(count>=2000&&oreoPurchases==0)
   if(!playback){
     playback = true;
     
-    cookiemonsterSound.src ='external stuff/ES_Cash Register 11 - SFX Producer.mp3';
+    cookiemonsterSound.src ='ES_Cash Register Open 5 - SFX Producer.mp3';
+
     
     cookiemonsterSound.play();
     playback= false;
@@ -428,7 +477,7 @@ if(count>=2000&&oreoPurchases==0)
  
   let appear = setTimeout(()=>{
     
-    cookieImage.src = "/external stuff/—Pngtree—oreo biscuit hand drawn cartoon_7384054 (1).png";
+    cookieImage.src = "—Pngtree—oreo biscuit hand drawn cartoon_7384054 (1).png";
   
     
     cookie.style.transform= "";
@@ -493,7 +542,8 @@ if(count>=1000&&donutPurchases==0)
   if(!playback){
     playback = true;
     
-    cookiemonsterSound.src ='external stuff/ES_Cash Register 11 - SFX Producer.mp3';
+    cookiemonsterSound.src ='ES_Cash Register Open 5 - SFX Producer.mp3';
+
     
     cookiemonsterSound.play();
     playback= false;
@@ -515,7 +565,7 @@ if(count>=1000&&donutPurchases==0)
  
   let appear = setTimeout(()=>{
     
-    cookieImage.src = "/external stuff//doughnut-circle-pattern-png-favpng-2hNyU6nWAx6UcJgUQGHUDz2KJ-removebg-preview.png";
+    cookieImage.src = "https://pngimg.com/uploads/donut/donut_PNG71.png";
   
     
     cookie.style.transform= "";
@@ -585,8 +635,8 @@ if(count>=500&&chocolatePurchases==0)
   if(!playback){
     playback = true;
     
-    cookiemonsterSound.src ='external stuff/ES_Cash Register 11 - SFX Producer.mp3';
-    
+    cookiemonsterSound.src ='ES_Cash Register Open 5 - SFX Producer.mp3';
+
     cookiemonsterSound.play();
     playback= false;
   }
@@ -612,7 +662,7 @@ if(count>=500&&chocolatePurchases==0)
  
   let appear = setTimeout(()=>{
     
-    cookieImage.src = "/external stuff/chocolate.png";
+    cookieImage.src = "—Pngtree—colorful swirl vector candies design_8663668.png";
   
     
     cookie.style.transform= "";
@@ -702,7 +752,7 @@ allSkins.forEach((e)=>{
         
         // cookiemonsterSound.src ="/external stuff/ES_Vending Machine 24 - SFX Producer.mp3";
         
-        cookiemonsterSound.src = "/external stuff/ES_PREL Glitch 82 - SFX Producer.mp3";
+        cookiemonsterSound.src = "ES_PREL Glitch 82 - SFX Producer.mp3";
         cookiemonsterSound.play();
         playback= false;
       }
@@ -718,20 +768,20 @@ allSkins.forEach((e)=>{
       let appear = setTimeout(()=>{
         
         
-        cookieImage.src = "/external stuff/best-cookie.png";
+        cookieImage.src = "best-cookie.png";
         
   
          if(e.classList.contains('donut-item'))
         {
-          cookieImage.src = "/external stuff//doughnut-circle-pattern-png-favpng-2hNyU6nWAx6UcJgUQGHUDz2KJ-removebg-preview.png";
+          cookieImage.src = "https://pngimg.com/uploads/donut/donut_PNG71.png";
         }
         
         if(e.classList.contains('oreo-item'))
         {
-          cookieImage.src = "/external stuff/—Pngtree—oreo biscuit hand drawn cartoon_7384054 (1).png";
+          cookieImage.src = "—Pngtree—oreo biscuit hand drawn cartoon_7384054 (1).png";
         }
         if(e.classList.contains('chocolate-item')){
-          cookieImage.src = "/external stuff/chocolate.png";
+          cookieImage.src = "—Pngtree—colorful swirl vector candies design_8663668.png";
         }
         
         cookie.style.transform= "";
@@ -781,3 +831,36 @@ let free = ()=>{
 
 
 }
+
+//mobile exit button for shop and skin section
+let shopExitBtn = document.getElementById("shop-exit-btn")
+
+shopExitBtn.onclick= ()=>{ 
+  shopFlag=false;
+  shop.style.animation  = "exit .3s linear forwards";
+
+  let hide = setTimeout(()=>{
+    shop.style.zIndex = -5;
+  },400)
+
+  
+}
+
+let skinExitBtn = document.getElementById("skin-exit-btn")
+
+skinExitBtn.onclick= ()=>{
+  skinFlag=false;
+  skinList.style.animation  = "exit .3s linear forwards";
+
+  let hide = setTimeout(()=>{
+    skinList.style.zIndex = -5;
+  },400)
+
+ 
+}
+
+//prevents drag on mobile devices
+
+document.addEventListener('touchmove', function(event) {
+  event.preventDefault();
+}, { passive: false });

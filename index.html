@@ -17,36 +17,38 @@
 
     
     <div class="shop">
+      <i class="fa-solid fa-xmark exit-btn" id="shop-exit-btn"></i>
       <div class="buy-a-item buy-clicker item">
         <img src="https://www.pngmart.com/files/3/Cursor-Hand-PNG-Image.png" alt="">
         <p class="ribbon">CLICKER</p>
-        <p class="clicker-price"> Cost:100 🍪</p>
+        <p class="clicker-price price"> Cost:20🍪</p>
       </div>
       <div class="buy-a-item buy-multiplier item ">
-        <img src="/external stuff/—Pngtree—vector multiply icon_4232486.png" alt="">
+        <img src="—Pngtree—vector multiply icon_4232486.png" alt="">
         <p class="ribbon">MULTIPLY</p>
-        <p class="multiplier-price">Cost:10 🍪</p>
+        <p class="multiplier-price price">Cost:10🍪</p>
       </div>
       
       <!-- skinoffers section -->
       <div class="buy-a-item buy-chocolate buy-a-skin item">
-        <img   src="/external stuff/chocolate.png" alt="">
+        <img   src="—Pngtree—colorful swirl vector candies design_8663668.png">
+        
         <p class="ribbon">CANDY</p>
-        <p class="-price">Cost: 500 🍪</p>
+        <p class="price">Cost:500🍪</p>
         <div class="skin">SKIN</div>
       </div>
 
       <div class="buy-a-item buy-donut buy-a-skin item">
-        <img  src="/external stuff//doughnut-circle-pattern-png-favpng-2hNyU6nWAx6UcJgUQGHUDz2KJ-removebg-preview.png" alt="">
+        <img  src="https://pngimg.com/uploads/donut/donut_PNG71.png" alt="">
         <p class="ribbon">DONUT</p>
-        <p class="-price">Cost: 1000 🍪</p>
+        <p class="price">Cost:1000🍪</p>
         <div class="skin">SKIN</div>
       </div>
       
       <div class="buy-a-item buy-a-skin buy-oreo item">
-        <img  src="/external stuff/—Pngtree—oreo biscuit hand drawn cartoon_7384054 (1).png" alt="">
+        <img  src="—Pngtree—oreo biscuit hand drawn cartoon_7384054 (1).png" alt="">
         <p class="ribbon">OREO</p>
-        <p class="-price">Cost: 2000 🍪</p>
+        <p class="price">Cost:2000🍪</p>
         <div class="skin">SKIN</div>
       </div>
       
@@ -62,8 +64,10 @@
 
 <div class="skin-list">
 
+  <i class="fa-solid fa-xmark exit-btn" id="skin-exit-btn"></i>
+
   <div style="transform: scale(1)" class="skin-item cookie-item selected">
-    <img  src="/external stuff/best-cookie.png"  alt="">
+    <img  src="best-cookie.png"  alt="">
     <p class="skin-ribbon">COOKIE</p>
 
     <div class="skin">SKIN</div>
@@ -73,19 +77,19 @@
     <div class="skin-item chocolate-item lock">
       <div class="locked">LOCKED</div>
 
-        <img  src="/external stuff//chocolate.png"  alt="">
+        <img  src="—Pngtree—colorful swirl vector candies design_8663668.png"  alt="">
         <p class="skin-ribbon">CANDY</p>
         <div class="skin">SKIN</div></div>
         
         <div class="skin-item donut-item lock">
           <div class="locked">LOCKED</div>
-          <img  src="/external stuff//doughnut-circle-pattern-png-favpng-2hNyU6nWAx6UcJgUQGHUDz2KJ-removebg-preview.png"  alt="">
+          <img  src="https://pngimg.com/uploads/donut/donut_PNG71.png"  alt="">
           <p class="skin-ribbon">DONUT</p>
           <div class="skin">SKIN</div></div>
           
           <div  class="skin-item oreo-item lock">
             <div class="locked">LOCKED</div>
-            <img  src="/external stuff/—Pngtree—oreo biscuit hand drawn cartoon_7384054 (1).png"  alt="">
+            <img  src="—Pngtree—oreo biscuit hand drawn cartoon_7384054 (1).png"  alt="">
             <p class="skin-ribbon">OREO</p>
             <div class="skin">SKIN</div></div>
       </div>
@@ -114,14 +118,14 @@
                 
 
         </div>
-<div class="tab-list">
+
   <div class="shop-tab tab"><i class="fa-solid fa-angle-up shop-icon"></i> <p>SHOP</p>
   </div>
   <div class="skin-tab tab"><i class="fa-solid fa-angle-up skin-icon"></i> <p>SKINS</p></div>
   <div onclick="restart()" class="reset"><p>RESET</p>
   </div>
-  <div onclick="free()" class="free"><p>FREE</p></div>
-</div>
+  <!-- <div onclick="free()" class="free"><p>FREE</p></div> -->
+
 
 
 
@@ -132,14 +136,5 @@
 
 
 <!-- jquery for overflow problem -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-$(window).on('load resize', function() {
-  if ($(window).width() < 481) {
-    $('body').css('overflow', 'hidden');
-  } else {
-    $('body').css('overflow', 'auto');
-  }
-});
-</script>
+
 </html>

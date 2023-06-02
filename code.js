@@ -48,7 +48,7 @@ let playback = false;
 
 
 //assigning initial values 
-let count = 0;
+let count = 6000;
 let clickers = 0;
 let multiplier = 1;
 let bonus = 0;
